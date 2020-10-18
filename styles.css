@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+  color: rgb(238, 238, 162);
+}
+
+.container {
+  max-width: 600px;
+}
+
+.btn {
+  background-color: rgb(168, 127, 206);
+  color: whitesmoke;
+}

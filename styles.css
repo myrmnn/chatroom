@@ -11,3 +11,12 @@ body {
   background-color: rgb(168, 127, 206);
   color: whitesmoke;
 }
+
+.chat-list {
+  color: black;
+}
+
+.username {
+  font-weight: bold;
+  color: rgb(30, 130, 161);
+}

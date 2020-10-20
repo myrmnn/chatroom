@@ -1,17 +1,24 @@
 class UpdateUI {
-  constructor(list) {
-    this.list = list;
-  }
+	constructor(list) {
+		this.list = list;
+	}
 
-  render(data) {
-    const html = `
+	clear() {
+		this.list.innerHTML = '';
+	}
+
+	render(data) {
+		const when = dateFns.distanceInWordsToNow(data.created_at.toDate(), {
+			addSuffix: true,
+		});
+		const html = `
       <li class="list-group-item">
       <span class="username">${data.username}</span>
       <span class="message">${data.message}</span>
-      <div class="timestamp">${data.created_at.toDate().toLocaleString()}</div>
+      <div class="timestamp p-1">${when}</div>
       </li>
       `;
 
-    this.list.innerHTML += html;
-  }
+		this.list.innerHTML += html;
+	}
 }
